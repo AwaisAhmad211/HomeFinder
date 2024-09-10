@@ -1,0 +1,97 @@
+@import '../../responsive.scss';
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    a{
+        transition: all 0.4s ease;
+        cursor: pointer;
+        &:hover{
+            scale: 1.05;
+        }
+    }
+    .left {
+        display: flex;
+        flex: 3;
+        align-items: center;
+        gap: 40px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            span{
+                font-weight: bold;
+                @include md {
+                    display: none;
+                }
+                @include sm {
+                    display: flex;
+                }
+            }
+        }
+        .nav__links{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include sm {
+                display: none;
+            }
+        }
+    }
+    .right{
+        display: flex;
+        flex: 2;
+        gap: 50px;
+        justify-content: flex-end;
+        @include sm{
+            display: none;
+        }
+        a{
+            padding: 5px;
+        }
+        .yellow{
+            background-color: #fece51;
+            border-radius: 5px;
+        }
+    }
+    .hambarger{
+      position: absolute;
+      top: 3.5%;
+      right: 8%;
+      z-index: 10;
+      display: none;
+      @include sm{
+        display: block;
+      }
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -50%;
+        background-color: black;
+        color: white;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 0.5s ease-out;
+        &.active{
+            right: 0;
+        }
+        .menu__links{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            a{
+                font-size: 30px;
+            }
+        }
+    }
+}

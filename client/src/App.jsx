@@ -1,10 +1,10 @@
-import Navbar from "./components/Navbar"
 import './App.scss'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
 
   return (
-    <div className="max-w-min[1330px]">
+    <div className='layout'>
       <Navbar />
     </div>
     

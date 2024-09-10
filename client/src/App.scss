@@ -1,5 +1,19 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import "./responsive.scss" ;
+
+.layout {
+    height: 100vh;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include lg {
+        max-width: 1280px;
+    }
+    @include md {
+        max-width: 768px;
+    }
+    @include sm {
+        max-width: 640px;
+    }
 }
