@@ -3,13 +3,16 @@
       @content;
     }
   }
-@mixin md {
+  
+  @mixin md {
     @media (max-width: 1024px) {
-        @content
+      @content;
     }
-} 
-@mixin lg {
+  }
+  
+  @mixin lg {
     @media (max-width: 1366px) {
-        @content
+      @content;
     }
-} 
+  }
+  

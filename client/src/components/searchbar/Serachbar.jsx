@@ -32,10 +32,10 @@ const Serachbar = () => {
         type="text" name='location' placeholder='City Location'/>
         <input
         onClick={handleChange}
-        type="number" name='minPrice' placeholder='Min Price' />
+        type="number" min={0} max={100000} name='minPrice' placeholder='Min Price' />
         <input
         onClick={handleChange}
-        type="number" name='maxPrice'  placeholder='Max Price'/>
+        type="number" min={0} max={100000} name='maxPrice'  placeholder='Max Price'/>
         <a href=""><button><img src={searchIcon} alt="SearchIcon" /></button></a>
       </form>
     </div>

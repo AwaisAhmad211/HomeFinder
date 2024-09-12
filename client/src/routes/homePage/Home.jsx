@@ -1,5 +1,6 @@
-import Serachbar from "../../src/components/searchbar/Serachbar";
+import Serachbar from '../../components/searchbar/Serachbar'
 import "./home.scss";
+import bg from '../../assets/bg.png'
 
 function HomePage() {
 
@@ -33,7 +34,7 @@ function HomePage() {
         </div>
       </div>
       <div className="imgContainer">
-        <img src="/bg.png" alt="" />
+        <img src={bg} alt="bgImg" />
       </div>
     </div>
   );
