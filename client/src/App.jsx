@@ -3,6 +3,7 @@ import Layout from '../src/routes/layouts/Layout'
 import HomePage from '../src/routes/homePage/Home'
 import ListPage from './routes/lists/ListPage'
 import Login from './routes/login/Login'
+import SinglePage from './routes/singlePage/SinglePage'
 
 function App() {
     const router = createBrowserRouter([
@@ -17,6 +18,10 @@ function App() {
           {
             path: "/list",
             element: <ListPage />
+          },
+          {
+            path: "/:id",
+            element: <SinglePage />
           },
           {
             path: "/login",

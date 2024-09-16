@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .listPage {
   display: flex;
   width: 100%;
@@ -15,5 +17,8 @@
 }
 .mapContainer {
     flex: 2;
+    @include md{
+      display: none;
+    }
   }
 }

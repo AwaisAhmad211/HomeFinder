@@ -11,13 +11,13 @@ const Card = ({item}) => {
   return (
     <div className='card'>
       <div className="imageContainer">
-        <Link>
+        <Link  to={`/:${item.id}`}>
            <img src={item.image} alt={item.id} />
         </Link>
         </div>
       <div className="textContainer">
         <div className="top">
-         <Link ><h1 className='title'>{item.title}</h1></Link>
+         <Link to={`/:${item.id}`}><h1 className='title'>{item.title}</h1></Link>
           <div className="address">
             <img src={pin} alt="pin" />
             <span>{item.address}</span>
@@ -35,7 +35,7 @@ const Card = ({item}) => {
                 <span>{`${item.bathroom} bathroom`}</span>
               </div>
           </div>
-          <div className="right">
+          <div className="icons">
             <div className="icon">
             <img src={save} alt="saveImg" />
             </div>
