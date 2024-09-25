@@ -1,20 +1,17 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png"
-import menu from "../../assets/menu.png"
-  
 
 function Navbar() {
   const [open, setOpen] = useState(false);
 
-
+  const user = true;
   return (
     <nav>
       <div className="left">
         <a href="/" className="logo">
-          <img src={logo} alt="" />
-          <span>LamaEstate</span>
+          <img src="/logo.png" alt="" />
+          <span>AwaisEstate</span>
         </a>
         <a href="/">Home</a>
         <a href="/">About</a>
@@ -22,24 +19,29 @@ function Navbar() {
         <a href="/">Agents</a>
       </div>
       <div className="right">
-          {/* <div className="user">
-            <img src={noavatar} alt="" />
-            <span>llll</span>
+        {user ? (
+          <div className="user">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoq0f1tSU2b8opZaApGh5tl2FreFb52dyo6Q&s"
+              alt=""
+            />
+            <span>Usman</span>
             <Link to="/profile" className="profile">
-              <div className="notification">2</div>
+              <div className="notification">3</div>
               <span>Profile</span>
             </Link>
-          </div> */}
+          </div>
+        ) : (
           <>
-            <a href="/login">Sign in</a>
-            <a href="/register" className="register">
+            <a href="/">Sign in</a>
+            <a href="/" className="register">
               Sign up
             </a>
           </>
+        )}
         <div className="menuIcon">
           <img
-            src=
-            {menu}
+            src="/menu.png"
             alt=""
             onClick={() => setOpen((prev) => !prev)}
           />

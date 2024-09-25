@@ -1,10 +1,7 @@
-import Serachbar from '../../components/searchbar/Serachbar'
-import "./home.scss";
-import bg from '../../assets/bg.png'
+import SearchBar from "../../components/searchBar/SearchBar";
+import "./homePage.scss";
 
 function HomePage() {
-
-
   return (
     <div className="homePage">
       <div className="textContainer">
@@ -16,7 +13,7 @@ function HomePage() {
             facilis id pariatur fugit quos laudantium temporibus dolor ea
             repellat provident impedit!
           </p>
-          <Serachbar />
+          <SearchBar />
           <div className="boxes">
             <div className="box">
               <h1>16+</h1>
@@ -34,7 +31,7 @@ function HomePage() {
         </div>
       </div>
       <div className="imgContainer">
-        <img src={bg} alt="bgImg" />
+        <img src="/bg.png" alt="" />
       </div>
     </div>
   );

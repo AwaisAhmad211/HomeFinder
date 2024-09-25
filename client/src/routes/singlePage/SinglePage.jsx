@@ -1,110 +1,92 @@
-import React from 'react'
-import './singlePage.scss'
-import Slider from '../../components/slider/Slider'
-import { singlePostData, userData } from '../../lib/dummydata'
-import pin from '../../assets/pin.png'
-import Map from '../../components/map/Map'
-import utilityImg from "../../assets/utility.png"
-import pet from "../../assets/pet.png"
-import feeImg from "../../assets/fee.png"
-import sizeImg from "../../assets/size.png"
-import bedImg from "../../assets/bed.png"
-import bathImg from "../../assets/bath.png"
-import schoolImg from "../../assets/school.png"
-import petImg from "../../assets/pet.png"
-import chatImg from "../../assets/chat.png"
-import saveImg from "../../assets/save.png"
+import "./singlePage.scss";
+import Slider from "../../components/slider/Slider";
+import Map from "../../components/map/Map";
+import { singlePostData, userData } from "../../lib/dummydata";
 
-const SinglePage = () => {
+function SinglePage() {
   return (
-    <div className='singlePage'>
+    <div className="singlePage">
       <div className="details">
-      <div className="wrapper">
-        <Slider images={singlePostData.images}/>
-        <div className="info">
-          <div className="top">
-            <div className="post">
+        <div className="wrapper">
+          <Slider images={singlePostData.images} />
+          <div className="info">
+            <div className="top">
+              <div className="post">
                 <h1>{singlePostData.title}</h1>
                 <div className="address">
-                  <img src={pin} alt="" />
+                  <img src="/pin.png" alt="" />
                   <span>{singlePostData.address}</span>
                 </div>
-                <div className="price">
-                  {`$ ${singlePostData.price}`}
-                </div>
+                <div className="price">$ {singlePostData.price}</div>
+              </div>
+              <div className="user">
+                <img src={userData.img} alt="" />
+                <span>{userData.name}</span>
+              </div>
             </div>
-            <div className="user">
-              <img src={userData.img} alt="" />
-              <span>{userData.name}</span>
-            </div>
-          </div>
-          <div className="bottom">
-            <p>{singlePostData.description}</p>
+            <div className="bottom">{singlePostData.description}</div>
           </div>
         </div>
-      </div>
       </div>
       <div className="features">
         <div className="wrapper">
           <p className="title">General</p>
           <div className="listVertical">
             <div className="feature">
-              <img src={utilityImg} alt="" />
+              <img src="/utility.png" alt="" />
               <div className="featureText">
                 <span>Utilities</span>
-                Owner is responsible
+                <p>Renter is responsible</p>
               </div>
             </div>
             <div className="feature">
-              <img src={pet} alt="" />
+              <img src="/pet.png" alt="" />
               <div className="featureText">
                 <span>Pet Policy</span>
-                Pets Allowed
+                <p>Pets Allowed</p>
               </div>
             </div>
             <div className="feature">
-              <img src={feeImg} alt="" />
+              <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Income Policy</span>
-                <p>Must have 3x the in total household rent</p>
+                <span>Property Fees</span>
+                <p>Must have 3x the rent in total household income</p>
               </div>
             </div>
           </div>
           <p className="title">Sizes</p>
           <div className="sizes">
             <div className="size">
-              <img src={sizeImg} alt="" />
+              <img src="/size.png" alt="" />
               <span>80 sqft</span>
             </div>
             <div className="size">
-              <img src={bedImg} alt="" />
+              <img src="/bed.png" alt="" />
               <span>2 beds</span>
             </div>
             <div className="size">
-            <img src={bathImg} alt="" />
+              <img src="/bath.png" alt="" />
               <span>1 bathroom</span>
             </div>
           </div>
           <p className="title">Nearby Places</p>
           <div className="listHorizontal">
             <div className="feature">
-              <img src={schoolImg} alt="" />
+              <img src="/school.png" alt="" />
               <div className="featureText">
                 <span>School</span>
-                <p>
-                 250m away
-                </p>
+                <p>250m away</p>
               </div>
             </div>
             <div className="feature">
-              <img src={petImg} alt="" />
+              <img src="/pet.png" alt="" />
               <div className="featureText">
                 <span>Bus Stop</span>
                 <p>100m away</p>
               </div>
             </div>
             <div className="feature">
-              <img src={feeImg} alt="" />
+              <img src="/fee.png" alt="" />
               <div className="featureText">
                 <span>Restaurant</span>
                 <p>200m away</p>
@@ -113,26 +95,22 @@ const SinglePage = () => {
           </div>
           <p className="title">Location</p>
           <div className="mapContainer">
-            <Map items={[]} />
+            <Map items={[singlePostData]} />
           </div>
           <div className="buttons">
             <button>
-              <img src={chatImg} alt="" />
+              <img src="/chat.png" alt="" />
               Send a Message
             </button>
-            <button
-              style={{
-                backgroundColor: "#fece51",
-              }}
-            >
-              <img src={saveImg} alt="" />
+            <button>
+              <img src="/save.png" alt="" />
               Save the Place
             </button>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default SinglePage
+export default SinglePage;
