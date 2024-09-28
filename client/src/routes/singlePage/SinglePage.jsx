@@ -2,6 +2,7 @@ import "./singlePage.scss";
 import Slider from "../../components/slider/Slider";
 import Map from "../../components/map/Map";
 import { singlePostData, userData } from "../../lib/dummydata";
+import { Link } from "react-router-dom";
 
 function SinglePage() {
   return (
@@ -98,10 +99,12 @@ function SinglePage() {
             <Map items={[singlePostData]} />
           </div>
           <div className="buttons">
+            <Link to="/login">
             <button>
               <img src="/chat.png" alt="" />
               Send a Message
             </button>
+            </Link>
             <button>
               <img src="/save.png" alt="" />
               Save the Place

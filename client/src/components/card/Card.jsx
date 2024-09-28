@@ -28,12 +28,16 @@ function Card({ item }) {
             </div>
           </div>
           <div className="icons">
+               <Link to="/login">
             <div className="icon">
               <img src="/save.png" alt="" />
             </div>
+               </Link>
+               <Link to="/login">
             <div className="icon">
               <img src="/chat.png" alt="" />
             </div>
+               </Link>     
           </div>
         </div>
       </div>
