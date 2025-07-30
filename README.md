@@ -1,4 +1,4 @@
-markdown# HomeFinder
+# HomeFinder
 
 A MERN stack-based real estate search engine built with MongoDB, Express.js, React, and Node.js, designed to help users find their dream homes. This platform allows users to search for properties, view detailed listings, and connect with property owners or agents, while providing a seamless experience for real estate exploration.
 
@@ -7,9 +7,7 @@ A MERN stack-based real estate search engine built with MongoDB, Express.js, Rea
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
